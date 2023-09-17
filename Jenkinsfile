@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Docker Image Build') {
             environment {
-                DOCKER_IMAGE = "saivamsipranay/ExactSpace:${BUILD_NUMBER}"
+                DOCKER_IMAGE = "saivamsipranay/exactspace:${BUILD_NUMBER}"
             }
             steps {
                 sh "docker image build -t ${DOCKER_IMAGE}"   
