@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             environment {
-                DOCKER_IMAGE = "saivamsipranay/ExactSpace:${BUILD_NUMBER}"
+                DOCKER_IMAGE = "saivamsipranay/exactspace:${BUILD_NUMBER}"
             }
             steps {
                 sh "docker run -d -p 80:80 ${DOCKER_IMAGE}"
