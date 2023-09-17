@@ -11,7 +11,7 @@ pipeline {
                 DOCKER_IMAGE = "saivamsipranay/exactspace:${BUILD_NUMBER}"
             }
             steps {
-                sh "docker image build -t ${DOCKER_IMAGE}"   
+                sh "docker image build -t ${DOCKER_IMAGE} ."   
             }
         }
         stage('Deploy') {
