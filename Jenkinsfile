@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "docker run -d -p 80:80 dorwardv/wordpress-sqlite-nginx-docker"
+                sh "docker run -d -p 8082:80 dorwardv/wordpress-sqlite-nginx-docker"
             }
         }
         
